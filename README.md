@@ -196,3 +196,12 @@ The content of this repository is bound by the following licenses:
 
 - The computer software is licensed under the [BSD-3-Clause](LICENSE.md) license.
 - The learning resources in the [`/curriculum`](/curriculum) directory including their subdirectories thereon are licensed under the [CC-BY-SA-4.0](/curriculum/LICENSE.md) license.
+
+## Status (Codex, 2026-10-19)
+
+**Result: blocked.** Checked `claude/code-installation-check-q9l8n2` at `aab0950e101d4f54c1cc39abd2dba572907399ba`.
+
+- **Verified:** Followed the linked local setup guide. pnpm 8 install --frozen-lockfile completed. Copied sample.env to a Git-ignored local .env without adding credentials. pnpm run seed failed because config/misc was not generated.
+- **Limits / next step:** This environment has Node 24 rather than the documented Node 18 and has no MongoDB service. Retry the documented supported stack, generate the configuration and seed MongoDB before claiming the client/API run. No hosted freeCodeCamp service was modified.
+
+Checks ran in a managed Linux environment; browser checks used Chromium over localhost. Results certify only the stated scope, not production readiness. No secret values, deployments or repository visibility changes were made. Upstream licences and notices are retained.
