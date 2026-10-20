@@ -196,3 +196,29 @@ The content of this repository is bound by the following licenses:
 
 - The computer software is licensed under the [BSD-3-Clause](LICENSE.md) license.
 - The learning resources in the [`/curriculum`](/curriculum) directory including their subdirectories thereon are licensed under the [CC-BY-SA-4.0](/curriculum/LICENSE.md) license.
+
+## Status (Codex, 2026-10-20)
+
+**Result: Blocked for local full-platform verification; source inspected.** Inspected `claude/code-installation-check-q9l8n2` at `aab0950e101d4f54c1cc39abd2dba572907399ba`.
+
+No full monorepo/dependency installation, MongoDB seed, application server or browser flow was run.
+
+- Exact branch/head, README, BSD-3-Clause LICENSE and local setup guide reviewed.
+- The pinned guide recommends Node 18.x, pnpm 8.x, MongoDB 4.2.x and at least 8 GB RAM; current Node 24 is not that documented matrix.
+
+**Checks performed:**
+
+- `node --version (v24.19.0)`
+- `GitHub API: pinned README/LICENSE/package/setup/CI configuration`
+
+**Remaining requirements and limits:**
+
+- MongoDB and the full dependency tree are absent. Remaining disk is insufficient for this large platform install.
+- Required commands after prerequisites: pnpm install; copy sample.env to own .env; start MongoDB; pnpm run seed; pnpm run develop.
+- Optional Auth0/Algolia integrations need owner keys; no values were read.
+
+**Licence:** BSD-3-Clause software; CC-BY-SA-4.0 curriculum, both retained.
+
+**Next step:** Run on a resource-appropriate environment with the pinned supported toolchain before claiming the platform works.
+
+This check covers only the scope stated above. No deployment, repository visibility change or secret-value inspection occurred. Existing source and notices are retained; this PR changes only this README.
